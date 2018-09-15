@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<!--sprite-phone.css 后期合并-->
+		<link rel="stylesheet" type="text/css" href="../dist/css/sprite-phone.css"/>
+		<link rel="stylesheet" type="text/css" href="../dist/css/public.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../dist/css/index.css"/>
+		<title>demo</title>
+		<style>
+			pre{padding:20px;background:#eee;line-height:24px;color:#666;white-space: pre;}
+		</style>
+		<script>
+			!function(n,e){var t=n.documentElement,i="orientationchange"in window?"orientationchange":"resize",d=function(){var n=t.clientWidth;n&&(t.style.fontSize=n/375*20+"px")};n.addEventListener&&(e.addEventListener(i,d,!1),n.addEventListener("DOMContentLoaded",d,!1))}(document,window);
+		</script>
+	</head>
+	<body>
+		<body>
+			<button class="btn-1">info</button>
+			<button class="btn-2">warning</button>
+			<button class="btn-3">success</button>
+			<button class="btn-4">error</button>
+			<div>
+<pre>
+xwPop.msg简便用法
+1、info xw.info(text,callBack)
+2、success xw.success(text,callBack)
+3、error xw.error(text,callBack)
+4、warn xw.warn(text,callBack)
+</pre>
+<pre>
+xwpop.msg完整用法
+xwPop.msg({
+	type:'info',   //success info warning error
+	callBack:'', //回调函数
+	showClose:false, //是否显示关闭按钮
+	text:'提示的文字内容', //内容
+	duration:3000, //显示的时间
+	fadeTime:500 //渐隐 渐入的时间
+})
+</pre>
+			</div>
+			<div>
+				<button class="btn-5">alert</button>
+				<button class="btn-6">confirm</button>
+			</div>
+<pre>
+xwPop.modal 简便用法
+xw.alert(txt,callBack)
+xw.confirm(txt,callBack,returnCallBack)
+</pre>
+<pre>
+xwPop.modal 详细用法
+xwPop.modal({
+	title:'提示',
+	type:'alert', //alert confirm
+	callBack:'', //确定回调
+	returnCallBack:'', //取消回调 confirm下才有
+	text: '提示的文字内容',
+	btn:{ //按钮文字
+		yes: '确定',
+		no: '取消'
+	},
+	autoClose:true, //点击确定取消执行function后 是否关闭当前弹窗
+	fadeTime:500, //渐隐 渐显的时间
+	width:'100%', //宽度
+	mask:true,//是否有蒙层
+	location:"btm", //默认在最底层 两种可选‘btm、mid’
+	hasClose:true,  //默认有关闭按钮
+})
+</pre>
+			<button class="btn-7">load</button>
+<pre>
+xwPop.load
+xw.load(txt) //显示加载
+xw.loadRemove() //删除加载
+</pre>
+			<pre>修改后的modal</pre>
+			<button class="btn-8">new</button>
+			<pre>自动消失的modal</pre>
+			<button class="btn-9">autoHide</button>
+
+	<script src="../dist/js/public.min.js"></script>		
+	<script>
+		$(".btn-1").bind("click",function(){
+			xw.info("This is a info message")
+		});
+		$(".btn-2").bind("click",function(){
+			xw.warn("This is a warning message")
+		});
+		$(".btn-3").bind("click",function(){
+			xw.success("This is a success message")
+		});
+		$(".btn-4").bind("click",function(){
+			xw.error("This is a error message")
+		});
+		$(".btn-5").bind("click",function(){
+			xw.alert("这是一个alert框")
+		});
+		$(".btn-6").bind("click",function(){
+			xw.confirm("这是一个confirm框",function(){
+				alert("你点击了确定")
+			},function(){
+				alert('你点击了取消')
+			})
+		});
+		
+		$(".btn-7").bind("click",function(){
+			xw.load('loading')
+			setTimeout(function(){
+				xw.loadRemove();
+			},5000)
+		});
+		$(".btn-8").bind('click',function(){
+			xwPop.modal({
+				title:'提示',
+				type:'confirm', //alert confirm
+				callBack:function(){
+					alert('确定回调');
+				}, //确定回调
+				returnCallBack:function(){
+					alert('取消按钮');
+				}, //取消回调 confirm下才有
+				text: '提示的文字内容',
+				btn:{ //按钮文字
+					yes: '确定',
+					no: '取消'
+				},
+				autoClose:true, //点击确定取消执行function后 是否关闭当前弹窗
+				fadeTime:500, //渐隐 渐显的时间
+				width:'100%', //宽度
+				mask:true,//是否有蒙层
+				location:"btm", //默认在最底层 两种可选‘btm、mid’
+				hasClose:true,  //默认有关闭按钮
+			});
+		});
+		
+		$(".btn-9").bind('click',function(){
+			xwPop.autoHide({
+				text: '自动消失',
+				fadeTime:200, //渐隐 渐显的时间
+				callBack:function(){
+					alert('autoHide回调');
+				}, 
+				width:'auto', //宽度
+				mask:false,//是否有蒙层
+			});
+		})
+	</script>
+	</body>
+</html>

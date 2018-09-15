@@ -1,0 +1,40 @@
+/*sprite start*/
+/*sprite end*/
+:root {
+	--text-pri:#6692ff;
+    --text-sub: #f8b551;
+    --text-gray: #f5f5f5;
+    --text-link: #38b9fc;
+    --fontSize36:0.9rem;
+    --fontSize30:0.75rem;
+    --fontSize28:0.7rem;
+    --text-333:#333;
+    --text-666:#666;
+    --text-999:#999;
+    --text-ccc:#ccc;
+    --bgf5f5f5:#f5f5f5;
+}
+.fl{float:left;}
+.fr{float:right;}
+.text-left{text-align: left;}
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+.container{padding: 0rem 0.8rem;background: #fff;}
+.container-gray{padding: 0rem 0.8rem;background: #f5f5f5;}
+.icon{display: inline-block;vertical-align: middle;}
+.Mainland{display: none;}
+.paddingTB20{padding: 0.5rem 0;}
+.fontSize24{font-size: 0.6rem;}
+.underline{text-decoration: underline;}
+input.width100{width: 100%;}
+input.input-error,select.input-error{border-color: #f15a22;box-shadow: 0 0 0.125rem #f15a22;}
+
+*{box-sizing: border-box;}
+/*自定义checkbox*/
+.bgf5f5f5{background: var(--bgf5f5f5);}
+.padding32{padding: 0 0.8rem;}
+.marginTop40{margin-top: 1rem;}
+.marginBtm16{margin-bottom: 0.4rem;}
+.marginTop20{margin-top: 0.5rem;}
+.marginTop16{margin-top: 0.4rem;}
+.offsetFix{padding-bottom: 2.5rem;}

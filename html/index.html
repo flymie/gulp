@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<!--sprite-phone.css 后期合并-->
+		<link rel="stylesheet" type="text/css" href="../dist/css/sprite-phone.css"/>
+		<link rel="stylesheet" type="text/css" href="../dist/css/public.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../dist/css/index.css"/>
+		<title>首页</title>
+		<script>
+			!function(n,e){var t=n.documentElement,i="orientationchange"in window?"orientationchange":"resize",d=function(){var n=t.clientWidth;n&&(t.style.fontSize=n/375*20+"px")};n.addEventListener&&(e.addEventListener(i,d,!1),n.addEventListener("DOMContentLoaded",d,!1))}(document,window);
+		</script>
+	</head>
+	<body>
+		<fieldset>
+			<legend>
+				字体
+			</legend>
+			#ddd;分割线颜色
+			<p class="text-pri">.text-pri字体颜色</p>
+			<p class="text-sub">.text-sub字体颜色</p>
+			<p class="text-gray">.text-gray字体颜色</p>
+			<p class="text-link">.text-link字体颜色  </p>
+			<p class="text-333">.text-333字体颜色  </p>
+			<p class="text-666">.text-666字体颜色  </p>
+			<p class="text-999">.text-999字体颜色</p>
+			<p class="text-ccc">.text-ccc字体颜色</p>	
+			<p class="fontSize36">字体大小0.9rem</p>
+			<p class="fontSize28"> 字体大小0.75rem</p>
+			<p class="fontSize28">字体大小0.7rem</p>
+		</fieldset>
+		
+		<fieldset>
+			<legend>按钮</legend>
+			<p><a href="#" class="com-btn">中按钮</a>.com-btn</p>
+			<p><a href="#" class="com-btn com-btn-disabled" >中按钮不可点击</a>.com-btn .com-btn-disabled</p>
+			<p><a href="#" class="com-btn com-btn-default">中按钮</a> .com-btn .com-btn-default</p>
+			<p><a href="#" class="com-btn com-btn-default com-btn-disabled">中按钮不可点击</a>.com-btn .com-btn-default .com-btn-disabled</p>
+			<p><a href="#" class="com-btn com-btn-block">大按钮</a>.com-btn .com-btn-block</p>
+			<p><a href="#" class="com-btn com-btn-block com-btn-disabled">大按钮不可点击</a>.com-btn .com-btn-block .com-btn-disabled</p>
+			<p><a href="#" class="com-btn com-btn-default com-btn-block">大按钮</a>.com-btn .com-btn-block</p>
+			<p><a href="#" class="com-btn com-btn-default com-btn-block com-btn-disabled">大按钮不可点击</a>.com-btn .com-btn-block .com-btn-disabled</p>
+			<p><a href="#" class="com-btn com-btn-small" >小按钮</a>com-btn com-btn-small</p>
+			<p><a href="#" class="com-btn com-btn-default com-btn-small" >小按钮</a>com-btn com-btn-default com-btn-small</p>
+			<p><a href="#" class="com-btn com-btn-subSmall">次小按钮</a>com-btn com-btn-subSmall</p>
+			<p><a href="#" class="com-btn com-btn-default com-btn-subSmall">次小按钮</a>com-btn com-btn-default com-btn-subSmall</p>
+		</fieldset>
+		
+		<fieldset>
+			<legend>开关</legend>
+			<div class="com-transferWrap">
+				<input type="checkbox" id="test"  />
+				<label for="test" class="com-transfer"></label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>checkbox radio</legend>
+			<div>默认checkbox</div>
+			<div class="icheck-wrap">
+				<input type="checkbox" class="icheck"/>
+				<span class="icheck-span"></span>
+			</div>
+			<div>选中checkbox</div>
+			<div class="icheck-wrap">
+				<input type="checkbox" class="icheck" checked="checked" />
+				<span class="icheck-span"></span>
+			</div>
+			<div>禁止checkbox</div>
+			<div class="icheck-wrap">
+				<input type="checkbox" class="icheck icheck-disabled" disabled="disabled" />
+				<span class="icheck-span"></span>
+			</div>
+			<div>选中禁止checkbox</div>
+			<div class="icheck-wrap">
+				<input type="checkbox" class="icheck icheck-disabled" checked="checked" disabled="disabled" />
+				<span class="icheck-span"></span>
+			</div>
+			
+			<div>默认radio</div>
+			<div class="iradio-wrap">
+				<input type="radio" class="iradio" name="test" />
+				<span class="iradio-fill"></span>
+			</div>
+			<div>选中radio</div>
+			<div class="iradio-wrap">
+				<input type="radio" class="iradio" checked="checked" name="test" />
+				<span class="iradio-fill"></span>
+			</div>
+			<div>未选中禁止radio</div>
+			<div class="iradio-wrap">
+				<input type="radio" class="iradio iradio-disabled" disabled="disabled" />
+				<span class="iradio-fill"></span>
+			</div>
+			<div>选中禁止radio</div>
+			<div class="iradio-wrap">
+				<input type="radio" class="iradio iradio-disabled" checked="checked" disabled="disabled" />
+				<span class="iradio-fill"></span>
+			</div>
+		</fieldset>
+		<script src="../dist/js/public.min.js"></script>		
+	</body>
+</html>
